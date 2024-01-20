@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_3</title>
+    <style>
+                *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-3</h1>
+</body>
+<script>
+    const scoreDolphins=(96+108+89)/3;
+const scoreKoals=(88+91+110)/3;
+console.log(scoreDolphins,scoreKoals);
+
+if(scoreDolphins>scoreKoals && scoreDolphins >= 100){
+ console.log('Dolphins win the trophy');
+}
+else if(scoreKoals > scoreDolphins && scoreKoals >= 100){
+    console.log('koalas win the trophy');
+}else if(scoreDolphins==scoreKoals >= 100){
+    console.log('Both win the trophy');
+}else{
+    console.log('No one wins the trophy');
+}
+</script>
+</html>
