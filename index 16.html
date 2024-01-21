@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_16</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-16</h1>
+</body>
+<script>
+   (function (){
+    const header = document.querySelector('h1');
+    header.style.color = 'red';
+
+    document.querySelector('body').addEventListener('click',function(){
+        header.style.color = 'blue';
+    });
+})();
+</script>
+</html>

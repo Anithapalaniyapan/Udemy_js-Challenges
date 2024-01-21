@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_9</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-9</h1>
+</body>
+<script>
+   const data1=[17,21,23];
+const data2=[12,5,-5,0,4];
+
+console.log(`...${data1[0]}ºC...${data1[1]}ºC...${data1[2]}ºC...`);
+
+const printForecast=function(arr){
+    let str='';
+    for(let i=0;i < arr.length;i++){
+        str += `${arr[i]}ºC in ${i+1} days...`;
+}
+console.log('...'+str);
+};
+printForecast(data1);
+</script>
+</html>

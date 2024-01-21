@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_4</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-4</h1>
+</body>
+<script>
+    document.body.append(document.createElement('textarea'));
+     document.body.append(document.createElement('button'));
+    document.querySelector('button').addeventListener('click',function(){
+    const text=document.querySelector('textarea').value;
+    const rows=text.split('\n');
+    for (const[i,row]  of rows.entries()){
+        const[first,second]=row.toLowerCase().trim().split('_')
+        const output=`${first}${second.replace(second[0],
+            second[0].toUpperCase())}`
+           
+        console.log(`${output.padEnd(20)}${'*'.repeat(i+1)}`);
+    }
+    });
+   
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_18</title>
+    <script src="script.js"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-18</h1>
+</body>
+<script>
+const calcAverageHumanAge = function (ages) {
+    const humanAges=ages.map(age => (age <= 2?2 * age : 16+age*4));
+    const adults=humanAges.filter(age=>age >=18);
+    console.log(humanAges);
+    console.log(adults);
+const average=adults.reduce( (acc, age, i, arr) => acc + age/ arr.length,0
+);
+return average;
+};
+const avg1 = calcAverageHumanAge([5,2,4,1,15,8,3]);
+const avg2= calcAverageHumanAge([16,6,10,5,6,1,4]);
+console.log(avg1,avg2);
+</script>
+</html>

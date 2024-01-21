@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_13</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-13</h1>
+</body>
+<script>
+     const gameEvents=new Map([
+        [17,'goal'],
+        [36,'substitution'],
+        [47,'goal'],
+        [61,'substitution'],
+        [64,'yellow card'],
+        [69,'red card'],
+        [70,'sustutiopn'],
+        [72,'sustutiopn'],
+        [76,'goal'],
+        [80,'goal'],
+        [92,'yellow card']
+    ]);
+    
+     const events=[...new Set(gameEvents.values())];
+     console.log(events);
+     gameEvents.delete(64)
+     console.log(`An event happened,on average,every ${gameEvents.size} minutes`);
+     const time=[...gameEvents.keys()].pop();
+     console.log(time)
+     console.log(`An event happened,on average,every ${time/gameEvents.size} minutes`);
+     for(const[min,event]of gameEvents){
+        const half=min<=45?'FIRST':'SECOND';
+        console.log(`[${half}HALF]${min}:${event}`)
+
+     }
+     
+
+</script>
+</html>
