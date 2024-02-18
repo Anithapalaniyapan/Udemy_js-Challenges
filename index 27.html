@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_27</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-27</h1>
+</body>
+<script>
+    class CarCl {
+            constructor(make, speed) {
+                this.make = make;
+                this.speed = speed;
+            }
+        
+            accelerate() {
+                this.speed += 10;
+                return this;
+            }
+        
+            
+            brake() {
+                this.speed -= 5;
+                return this;
+            }
+        
+       
+            displaySpeed() {
+                const speedElement = document.getElementById('speed');
+                speedElement.textContent = this.speed;
+            }
+        }
+        
+        
+        class EVCl extends CarCl {
+            #charge;
+        
+            constructor(make, speed, charge) {
+                super(make, speed);
+                this.#charge = charge;
+            }
+        
+         
+            #displayCharge() {
+                const chargeElement = document.getElementById('charge');
+                chargeElement.textContent = this.#charge;
+            }
+        
+            
+            chargeBattery(chargeTo) {
+                this.#charge = chargeTo;
+                this.#displayCharge();
+                return this;
+            }
+        
+          
+            accelerate() {
+                this.speed += 20;
+                this.#charge -= 1;
+                console.log(`${this.make} going at ${this.speed} km/h, with a charge of ${this.#charge}%`);
+                this.displaySpeed();
+                this.#displayCharge();
+                return this;
+            }
+        }
+        
+        
+        function accelerate() {
+            rivian.accelerate();
+        }
+        
+       
+        function brake() {
+            rivian.brake();
+        }
+       
+        function chargeBattery() {
+            rivian.chargeBattery(90);
+        }
+       
+        const rivian = new EVCl('Rivian', 120, 23);
+</script>
+</html>
