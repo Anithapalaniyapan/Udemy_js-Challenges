@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_21</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-21</h1>
+</body>
+<script>
+     const Car=function(make,speed){
+        this.make=make;
+        this.speed=speed;
+    };
+    Car.prototype.accelerate=function(){
+        this.speed +=10;
+        console.log(`${this.make} is going at ${this.speed}km/h`);
+    };
+    Car.prototype.brake=function(){
+        this.speed -=5;
+        console.log(`${this.make} is going at ${this.speed}km/h`);
+    };
+    const bmw=new Car('BMw',120 );
+    const mercedes=new Car('Mercedes',95);
+    bmw.accelerate();
+    bmw.accelerate();
+    bmw.brake();
+    bmw.accelerate();
+</script>
+</html>

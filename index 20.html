@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_20</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-20</h1>
+</body>
+<script>
+     const dogs = [
+        { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
+        { weight: 8, curFood: 200, owners: ["Matilda"] },
+        { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
+        { weight: 32, curFood: 340, owners: ["Michael"] },
+      ];
+      dogs.forEach((dog) => {
+        dog.recommendedFood = Math.round(dog.weight ** 0.75 * 28);
+      });
+      const sarahDog = dogs.find((dog) => dog.owners.includes("Sarah"));
+      if (sarahDog) {
+        if (sarahDog.curFood > sarahDog.recommendedFood) {
+          console.log("Sarah's dog is eating too much!");
+        } else if (sarahDog.curFood < sarahDog.recommendedFood) {
+          console.log("Sarah's dog is eating too little!");
+        } else {
+          console.log("Sarah's dog is eating the right amount!");
+        }
+      } else {
+        console.log("Sarah doesn't own any dogs in this data.");
+      }
+</script>
+</html>

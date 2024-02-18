@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Challenge_22</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <h1>Challenge-22</h1>
+</body>
+<script>
+    class CarCl{
+     constructor(make,speed){
+        this.make=make;
+        this.speed=speed;
+    }
+accelerate(){
+        this.speed +=10;
+        console.log(`${this.make} is going at ${this.speed}km/h`);
+    }
+    brake(){
+        this.speed -=5;
+        console.log(`${this.make} is going at ${this.speed}km/h`);
+    }
+    get speedUS(){
+        return this.speed/1.6;
+    }
+    set speedUS(speed){
+        this.speed*1.6;
+    }
+}
+const ford = new CarCl('Ford',120);
+console.log(ford.speedUS);
+ford.accelerate();
+ford.accelerate();
+ford.brake();
+ford.speedUS=50;
+console.log(ford);
+</script>
+</html>
